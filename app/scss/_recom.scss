@@ -1,0 +1,129 @@
+.recomedation{
+    padding-top: 30px;
+    background-color: $bg-color;
+}
+
+.recom {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include vieport-md{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    // .recom__service
+
+    &__service {
+        width: 100%;
+        height: auto;
+    }
+
+    // .recom__link
+
+    &__link {
+        @include base-link;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		position: relative;
+		padding-right: 8px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 5.5px;
+			right: 0;
+			width: 6px;
+			height: 6px;
+			border-bottom: 2px solid $regular-color;
+			border-right: 2px solid $regular-color;
+			transform: rotate(-45deg);
+			letter-spacing: 1px;
+			transition: .2s;
+		}
+    }
+
+    // .recom__title
+
+    &__title {
+        font-size: 30px;
+		font-weight: 700;
+		background: $gradient-red-text ;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    // .recom__card
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        background-color: $basic-white;
+        border-radius: 8px;
+        @include vieport-md {
+            flex: 1 0 0;
+        }
+    }
+
+    // .recom__img
+
+    &__img {
+        width: 100%;
+        height: 200px;
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+    }
+
+    &__texts{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+    }
+    // .recom__texts-title
+
+    &__texts-title {
+        font-size: 16px;
+        font-weight: 700;
+        a{
+            color: $regular-color;
+			text-decoration: none;
+        }
+    }
+
+    // .recom__texts-date
+
+    &__texts-date {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-color;
+    }
+    
+    &__texts-line{
+        display: block;
+        width: 100%;
+		height: 4px;
+		background-color: $separator-color;
+    }
+    // .recom__texts-text
+
+    &__texts-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.end{
+    @include vieport-md {
+        flex: 1 0 100%;
+    }
+    @include vieport-lg{
+        flex: 1 0 0;
+    }
+}

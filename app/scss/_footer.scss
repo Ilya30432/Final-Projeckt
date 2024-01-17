@@ -1,0 +1,132 @@
+// footer //
+
+.foot {
+	background-color: $bg-color;
+	padding: 30px 0;
+}
+.footer {
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+	@include vieport-md{
+    align-items: flex-start;
+    gap: 0px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	}
+	@include vieport-lg{
+    flex-direction: row;
+	}
+
+
+
+	&__line{
+		width: 100%;
+		height: 2px;
+		background-color: $separator-color;
+		@include vieport-md{
+			margin-bottom: 30px;
+		}
+	}
+
+
+		// .footer__text
+
+		&__text {
+			display: flex;
+        align-items: center;
+        flex-direction: column;
+		gap: 10px;
+			@include vieport-md {
+				flex-direction: row;
+				flex: 1 1 45%;
+				margin-bottom: 21px;
+			}
+		}
+
+		// .footer__text-adres
+
+		&__text-adres {
+			color: $main-color;
+			font-size: 16px;
+		}
+
+		// .footer__text-map
+
+		&__text-map {
+			color: $regular-color;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 12px ;
+			letter-spacing: 1px;
+		}
+
+		// .footer__soc
+
+		&__soc {
+			display: flex;
+        align-items: center;
+        flex-direction: column;
+		gap: 10px;
+		@include vieport-md {
+			flex-direction: row;
+			order: 3;
+			flex: 1 1 100%;
+		}
+		}
+
+		// .footer__soc-social
+
+		&__soc-social {
+			display: block;
+			width: 38px;
+			height: 38px;
+
+		}
+
+		// .footer__soc-social-face
+
+		&__soc-social-face {
+			fill: $regular-color;
+			width: 38px;
+			height: 38px;
+			&:hover{
+				fill: $accent-color;}
+		}
+
+		// .footer__soc-phone
+
+		&__soc-phone {
+			display: block;
+			color: $alt-color;
+			font-weight: 700;
+			font-size: 16px;
+			text-decoration: none ;
+		}
+
+		// .footer__soc-email
+
+		&__soc-email {
+			display: block;
+			color: $regular-color;
+			font-weight: 700;
+			font-size: 16px;
+			text-decoration: none ;
+			&:hover{
+				color: $accent-color;
+			}
+		}
+
+		// .footer__end
+
+		&__end {
+            display: flex;
+			color: $text-color;
+			@include vieport-md{
+				flex: 1 1 45%;
+				justify-content: end;
+			}
+		}
+}
+

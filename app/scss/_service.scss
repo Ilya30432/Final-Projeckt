@@ -1,0 +1,140 @@
+// box card //
+
+.box {
+	// .box__title
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	@include vieport-md{
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 55px;
+	}
+	@include vieport-lg {
+		gap: 60px;
+	}
+
+    // .box__service //
+    &__service{
+        width: 100%;
+        height: auto;
+    }
+
+    &__service-link{
+        @include base-link;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		position: relative;
+		padding-right: 8px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 5.5px;
+			right: 0;
+			width: 6px;
+			height: 6px;
+			border-bottom: 2px solid $regular-color;
+			border-right: 2px solid $regular-color;
+			transform: rotate(-45deg);
+			letter-spacing: 1px;
+			transition: .2s;
+		}
+    }
+
+	&__service-title {
+		font-size: 30px;
+		font-weight: 700;
+		background: $gradient-red-text ;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+		@include vieport-lg {
+			width: 100%;
+		}
+	}
+
+	// .box__card
+
+	&__card {
+		display: flex;
+	flex-direction: column;
+	gap: 30px;
+	@include vieport-md{
+		max-width: 295px;
+		height: auto;
+		gap: 0;
+	}
+	@include vieport-lg {
+		max-width: 260px;
+	}
+	@include vieport-xl{
+    max-width: 400px;
+	}
+	@include vieport-xxl {
+		max-width: 493px;
+	}
+	}
+
+	// .box__link
+
+	&__link {
+		background-color: $basic-white;
+		width: 92px;
+		height: 92px;
+		border-radius: 24px;
+		padding: 14px;
+		@include vieport-md {
+			margin-bottom: 30px;
+		}
+	}
+
+    .box__links{
+		background-color: $basic-white;
+		width: 92px;
+		height: 92px;
+		border-radius: 24px;
+		padding: 21px;
+		@include vieport-md {
+			margin-bottom: 30px;
+		}
+	}
+
+	// .box__link-svg
+
+	&__link-svg {
+		width: 64px;
+		height: 64px;
+	}
+
+	// .box__tit
+
+	&__tit {
+		font-size: 22px;
+		font-weight: 700;
+		a {
+			color: $regular-color;
+			text-decoration: none;
+		}
+		@include vieport-md{
+			margin-bottom: 15px;
+		}
+
+	}
+
+	// .box__text
+
+	&__text {
+		color: $basic-white;
+		line-height: 26px
+	}
+}
+
+.title {
+	a {
+      &:hover{
+		color: $accent-color;
+		transition: .3s;
+	  }
+	}
+}

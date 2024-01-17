@@ -1,0 +1,126 @@
+.img {
+    @include vieport-xxl{
+        padding: 0 100px;
+    }
+    // .img__list
+    &__title{
+        font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+
+
+    &__list {
+        max-height: 720px;
+        overflow-y: scroll;
+        @include vieport-md{
+            overflow-y: visible;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li {
+            display: flex;
+            height: 120px;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0 0;
+            @include vieport-md{
+                flex: 1 0 33%;
+            }
+            @include vieport-lg{
+                flex: 1 0 25%;
+            }
+        }
+    }
+
+    // .img__list-hilel
+
+    &__list-hilel {
+        background: #1C4280;
+        @include vieport-xxl{
+            border-top-left-radius: 12px;
+        }
+    }
+
+    // .img__list-wanna
+
+    &__list-wanna {
+        background: #143646;
+    }
+
+    // .img__list-tapgerine
+
+    &__list-tapgerine {
+        background: #F48B30;
+    }
+
+    // .img__list-dlook
+
+    &__list-dlook {
+        background:  #9E4DC3;
+        @include vieport-xxl{
+            border-top-right-radius: 12px;
+        }
+    }
+
+    // .img__list-orangear
+
+    &__list-orangear {
+        background: #FD9339;
+    }
+
+    // .img__list-adtle
+
+    &__list-adtle {
+        background: #E2E2E4;
+    }
+
+    // .img__list-clickky
+
+    &__list-clickky {
+        background: #C71C36;
+    }
+
+    // .img__list-ecolease
+
+    &__list-ecolease {
+        background: #DCF3F9;
+    }
+
+    // .img__list-infra
+
+    &__list-infra {
+        background: #EAEAEA;
+        @include vieport-xxl{
+            border-bottom-left-radius: 12px;
+        }
+    }
+
+    // .img__list-city
+
+    &__list-city {
+        background: #282240;
+    }
+
+    // .img__list-artprint
+
+    &__list-artprint {
+        background: #1D4568;
+    }
+
+    // .img__list-ultimate
+
+    &__list-ultimate {
+        background: #000;
+        @include vieport-xxl{
+            border-bottom-right-radius: 12px;
+        }
+    }
+}
+
+.imgs{
+    margin-top: 60px;
+}
